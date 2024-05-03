@@ -1,0 +1,10 @@
+
+.login-profile-area{
+	display: none;
+}
+#sidebar .sidebar-search {
+    display: block;
+}
+.books-cover .book-wrap-card .img-wrap{
+    height: 450px;
+}

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.77d26887.css",
+    "main.js": "./static/js/main.f713f3d8.js",
+    "static/js/498.f1030844.chunk.js": "./static/js/498.f1030844.chunk.js",
+    "static/js/703.4fa8cab0.chunk.js": "./static/js/703.4fa8cab0.chunk.js",
+    "static/js/513.8d2bc7b0.chunk.js": "./static/js/513.8d2bc7b0.chunk.js",
+    "static/js/787.7668d940.chunk.js": "./static/js/787.7668d940.chunk.js",
+    "static/media/vtabu_reader_user_manual_v_1_0.pdf": "./static/media/vtabu_reader_user_manual_v_1_0.f1e486e0fcdf57c2cf0a.pdf",
+    "static/media/movie.mp4": "./static/media/movie.3b89bb898dd9d9de98e0.mp4",
+    "static/media/horse.ogv": "./static/media/horse.feca5bad734cb69d8658.ogv",
+    "index.html": "./index.html",
+    "static/media/TestPdf.pdf": "./static/media/TestPdf.ac0398d4ca249e568588.pdf",
+    "main.77d26887.css.map": "./static/css/main.77d26887.css.map",
+    "main.f713f3d8.js.map": "./static/js/main.f713f3d8.js.map",
+    "498.f1030844.chunk.js.map": "./static/js/498.f1030844.chunk.js.map",
+    "703.4fa8cab0.chunk.js.map": "./static/js/703.4fa8cab0.chunk.js.map",
+    "513.8d2bc7b0.chunk.js.map": "./static/js/513.8d2bc7b0.chunk.js.map",
+    "787.7668d940.chunk.js.map": "./static/js/787.7668d940.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77d26887.css",
+    "static/js/main.f713f3d8.js"
+  ]
+}

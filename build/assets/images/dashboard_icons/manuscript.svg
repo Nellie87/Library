@@ -1,0 +1,37 @@
+<svg width="299" height="300" viewBox="0 0 299 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="54" y="46" width="192" height="212" stroke="white" stroke-width="12"/>
+<rect x="74" y="65" width="152" height="170" rx="20" stroke="white" stroke-width="12"/>
+<mask id="path-3-inside-1_425_167" fill="white">
+<rect x="37" width="224" height="51" rx="10"/>
+</mask>
+<rect x="37" width="224" height="51" rx="10" stroke="white" stroke-width="24" mask="url(#path-3-inside-1_425_167)"/>
+<mask id="path-4-inside-2_425_167" fill="white">
+<rect x="271" y="1" width="28" height="49" rx="10"/>
+</mask>
+<rect x="271" y="1" width="28" height="49" rx="10" stroke="white" stroke-width="24" mask="url(#path-4-inside-2_425_167)"/>
+<rect x="257.5" y="15.5" width="19" height="20" rx="5.5" stroke="white" stroke-width="9"/>
+<mask id="path-6-inside-3_425_167" fill="white">
+<rect x="28" y="50" width="28" height="49" rx="10" transform="rotate(-180 28 50)"/>
+</mask>
+<rect x="28" y="50" width="28" height="49" rx="10" transform="rotate(-180 28 50)" stroke="white" stroke-width="24" mask="url(#path-6-inside-3_425_167)"/>
+<rect x="41.5" y="35.5" width="19" height="20" rx="5.5" transform="rotate(-180 41.5 35.5)" stroke="white" stroke-width="9"/>
+<mask id="path-8-inside-4_425_167" fill="white">
+<rect x="37" y="249" width="224" height="51" rx="10"/>
+</mask>
+<rect x="37" y="249" width="224" height="51" rx="10" stroke="white" stroke-width="24" mask="url(#path-8-inside-4_425_167)"/>
+<mask id="path-9-inside-5_425_167" fill="white">
+<rect x="271" y="250" width="28" height="49" rx="10"/>
+</mask>
+<rect x="271" y="250" width="28" height="49" rx="10" stroke="white" stroke-width="24" mask="url(#path-9-inside-5_425_167)"/>
+<rect x="257.5" y="264.5" width="19" height="20" rx="5.5" stroke="white" stroke-width="9"/>
+<mask id="path-11-inside-6_425_167" fill="white">
+<rect x="28" y="299" width="28" height="49" rx="10" transform="rotate(-180 28 299)"/>
+</mask>
+<rect x="28" y="299" width="28" height="49" rx="10" transform="rotate(-180 28 299)" stroke="white" stroke-width="24" mask="url(#path-11-inside-6_425_167)"/>
+<rect x="41.5" y="284.5" width="19" height="20" rx="5.5" transform="rotate(-180 41.5 284.5)" stroke="white" stroke-width="9"/>
+<line x1="100" y1="94" x2="203" y2="94" stroke="white" stroke-width="12"/>
+<line x1="100" y1="120" x2="203" y2="120" stroke="white" stroke-width="12"/>
+<line x1="100" y1="146" x2="203" y2="146" stroke="white" stroke-width="12"/>
+<line x1="100" y1="172" x2="203" y2="172" stroke="white" stroke-width="12"/>
+<line x1="100" y1="198" x2="203" y2="198" stroke="white" stroke-width="12"/>
+</svg>

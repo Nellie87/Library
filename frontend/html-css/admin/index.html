@@ -1,0 +1,379 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="GeniusOcean">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- Title -->
+    <title>KNLS | Admin</title>
+    <!-- favicon -->
+    <link rel="icon" href="../assets/images/favicon.png" type="image/gif">
+
+    <!-- Bootstrap -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <!-- icofont -->
+    <link rel="stylesheet" href="../assets/css/icofont.min.css">
+    <!-- Sidemenu Css -->
+    <link href="../assets/plugins/fullside-menu/css/dark-side-style.css" rel="stylesheet"/>
+    <link href="../assets/plugins/fullside-menu/waves.min.css" rel="stylesheet"/>
+
+    <link href="../assets/css/plugin.css" rel="stylesheet"/>
+
+    <link href="../assets/css/jquery.tagit.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/bootstrap-coloroicker.css">
+    <!-- Main Css -->
+    <!--Select Picker-->
+    <link rel="stylesheet" href="../assets/css/bootstrap-select.min.css" type="text/css">
+    <!--Select Picker End-->
+    <!-- stylesheet -->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
+
+    <link href="../assets/css/style.css" rel="stylesheet"/>
+    <link href="../assets/css/custom.css" rel="stylesheet"/>
+    <link href="../assets/css/common.css" rel="stylesheet"/>
+    <link href="../assets/css/customnew.css" rel="stylesheet"/>
+    <link href="../assets/css/toaster.css" rel="stylesheet" type="text/css"/>
+
+    <!-- responsive css -->
+    <link href="../assets/css/responsive/responsive.css" rel="stylesheet" type="text/css"/>
+    <link rel='stylesheet' media='screen and (max-width: 320px)' href='../assets/css/responsive/xs.css' />
+    <link rel='stylesheet' media='screen and (max-width: 768px)' href='../assets/css/responsive/sm.css' />
+    <link rel='stylesheet' media='screen and (min-width: 768px)' href='../assets/css/responsive/md.css' />
+    <link rel='stylesheet' media='screen and (min-width: 992px)' href='../assets/css/responsive/lg.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1200px)' href='../assets/css/responsive/xl.css' />
+    <!-- responsive css -->
+
+</head>
+
+<body>
+<div class="page">
+    <div class="page-main">
+        <!-- Header Menu Area Start -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center logo_wrap">
+                         <div class="menu-toggle-button">
+                            <a class="nav-link " href="javascript:;" id="sidebarCollapse">
+                                <div class="my-toggl-icon">
+                                    <span class="bar1"></span>
+                                    <span class="bar2"></span>
+                                    <span class="bar3"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="admin-logo" href="#" target="_blank">
+                            <img src="../assets/images/logo.png"/>
+                        </a>
+                    </div>
+                    <div class="right_wrap pl-0 pl-md-4">
+                        <div class="menu-search-box">
+                            <input type="text" placeholder="Search Books, Author, Publisher" class="search-box m-0">
+                            <span class="fa fa-search"></span>
+                        </div>
+                        <div class="right-eliment">
+                            <ul class="list">
+
+                                <!-- <li class="bell-area">
+                                    <a id="notf_conv" class="dropdown-toggle-1" href="javascript:;">
+                                        <i class="far fa-envelope"></i>
+                                        <span data-href="#" id="conv-notf-count">0</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdownmenu-wrapper" data-href="#" id="conv-notf-show">
+                                        </div>
+                                    </div>
+                                </li> -->
+
+                                
+
+                                <li class="login-profile-area">
+                                    <a class="dropdown-toggle-1" href="javascript:;">
+                                        <div class="user-img">
+                                            <img src="../assets/images/user.png" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdownmenu-wrapper">
+                                            <ul>
+                                                <h5>Welcome</h5>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-user"></i> Edit Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-cog"></i> Change Password</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-power-off"></i>Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Menu Area End -->
+        <div class="wrapper">
+            <!-- Side Menu Area Start -->
+            <nav id="sidebar" class="nav-sidebar">
+                <ul class="list-unstyled components" id="accordion">
+                    <li>
+                        <div class="sidebar-search">
+                            <input type="text" placeholder="Search Books, Author, Publisher" class="search-box">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="wave-effect sidebar-menu "><i class="fa fa-home mr-2"> </i>Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="#user_management" class="accordion-toggle active wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fa fa-users"></i> User Management</a>
+                        <ul class="collapse list-unstyled" id="user_management" data-parent="#accordion">
+                            <li>
+                                <a href="#"> All Users</a>
+                            </li>
+                            <li>
+                                <a href="#"> Add Users</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#search_portal" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-desktop"></i> Search Portal(s) Design and Layout</a>
+                        <ul class="collapse list-unstyled" id="search_portal" data-parent="#accordion">
+                            <li>
+                                <a href="#"> Home Page</a>
+                            </li>
+                            <li>
+                                <a href="#"> About us</a>
+                            </li>
+                            <li>
+                                <a href="#"> Privacy & Policy</a>
+                            </li>
+                            <li>
+                                <a href="#"> Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#Contents" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fa fa-keyboard"></i> Content Assesment & Management</a>
+                        <ul class="collapse list-unstyled" id="Contents" data-parent="#accordion">
+                            <li>
+                                <a href="#"> Discovery Services</a>
+                            </li>
+                            <li>
+                                <a href="#"> eBook from aggregators</a>
+                            </li>
+                            <li>
+                                <a href="#"> Independent authors</a>
+                            </li>
+                            <li>
+                                <a href="#"> Consotia Services</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#review" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-book-open"></i> Content Review & Publishing</a>
+                        <ul class="collapse list-unstyled" id="review" data-parent="#accordion">
+                            <li>
+                                <a href="#"> Review Content</a>
+                            </li>
+                            <li>
+                                <a href="#"> Add new Book</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#digital_rights" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"> <i class="fas fa-digital-tachograph"></i> Digital Rights Management</a>
+                        <ul class="collapse list-unstyled" id="digital_rights" data-parent="#accordion">
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#digital_rights" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-bookmark"></i> Library catalog</a>
+                        <ul class="collapse list-unstyled" id="digital_rights" data-parent="#accordion">
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#reporting" class="accordion-toggle wave-effect sidebar-menu" data-toggle="collapse" aria-expanded="false"><i class="fas fa-hand-holding-usd"></i> Reporting & Stastics</a>
+                        <ul class="collapse list-unstyled" id="reporting" data-parent="#accordion">
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                            <li>
+                                <a href="#"> sub menu</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Main Content Area Start -->
+            <div class="content-area">
+                <div class="row row-cards-one dashboard-box">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <h3 class="dashboard-title title-margin">Digital Resources</h3>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="publisher-card ebook">
+                            <img src="../assets/images/icons/ebook.svg" class="img-fluid d-block" alt="">
+                            <h5 class="card-title mt-3">E-Books <span class="d-block number float-right">585821</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="publisher-card audiobook">
+                            <img src="../assets/images/icons/audiobook.svg" class="img-fluid d-block" alt="">
+                            <h5 class="card-title mt-3">Audio Books <span class="d-block number float-right">585821</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="publisher-card videobook">
+                            <img src="../assets/images/icons/videobook.svg" class="img-fluid d-block" alt="">
+                            <h5 class="card-title mt-3">Video Books <span class="d-block number float-right">585821</span></h5>
+                                
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="publisher-card slide">
+                            <img src="../assets/images/icons/slide.svg" class="img-fluid d-block" alt="">
+                            <h5 class="card-title mt-3">Slides <span class="d-block number float-right">585821</span></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-cards-one dashboard-box">
+                    <div class="col-md-12 col-lg-12 col-xl-12">
+                        <h3 class="dashboard-title title-margin">Popular Books</h3>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="popular-book">
+                            <div class="row book-image">
+                                <div class="col-md-12">
+                                    <img src="../assets/images/books/1.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row book-details">
+                                <div class="col-md-12">
+                                    <h5 class="book-author">Mark Kenyon</h5>
+                                    <h4 class="book-title">The Wild Country</h4>
+                                    <h5 class="book-price">$ 63.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="popular-book">
+                            <div class="row book-image">
+                                <div class="col-md-12">
+                                    <img src="../assets/images/books/2.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row book-details">
+                                <div class="col-md-12">
+                                    <h5 class="book-author">Mark Kenyon</h5>
+                                    <h4 class="book-title">The Wild Country</h4>
+                                    <h5 class="book-price">$ 63.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="popular-book">
+                            <div class="row book-image">
+                                <div class="col-md-12">
+                                    <img src="../assets/images/books/3.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row book-details">
+                                <div class="col-md-12">
+                                    <h5 class="book-author">Mark Kenyon</h5>
+                                    <h4 class="book-title">The Wild Country</h4>
+                                    <h5 class="book-price">$ 63.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 col-xl-3 mb-4">
+                        <div class="popular-book">
+                            <div class="row book-image">
+                                <div class="col-md-12">
+                                    <img src="../assets/images/books/4.jpg" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row book-details">
+                                <div class="col-md-12">
+                                    <h5 class="book-author">Mark Kenyon</h5>
+                                    <h4 class="book-title">The Wild Country</h4>
+                                    <h5 class="book-price">$ 63.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Main Content Area End -->
+
+        </div>
+    </div>
+</div>
+<!-- Dashboard Core -->
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/vendors/jquery-1.12.4.min.js"></script>
+<script src="../assets/js/vendors/vue.js"></script>
+<script src="../assets/js/vendors/bootstrap.min.js"></script>
+<script src="../assets/js/jqueryui.min.js"></script>
+<script src="../assets/js/bootstrap-select.min.js"></script>
+<!-- Fullside-menu Js-->
+<script src="../assets/plugins/fullside-menu/jquery.slimscroll.min.js"></script>
+<script src="../assets/plugins/fullside-menu/waves.min.js"></script>
+<script src="../assets/js/plugin.js"></script>
+<script src="../assets/js/Chart.min.js"></script>
+<script src="../assets/js/tag-it.js"></script>
+<script src="../assets/js/nicEdit.js"></script>
+<script src="../assets/js/bootstrap-colorpicker.min.js"></script>
+<script src="../assets/js/jsvalidation.js"></script>
+<script src="../assets/js/toastr.min.js"></script>
+<script src="../assets/js/bootbox.min.js"></script>
+<script src="../assets/js/notify.js"></script>
+
+<script src="../assets/js/jquery.canvasjs.min.js"></script>
+
+<script src="../assets/js/load.js"></script>
+<!-- Custom Js-->
+<script src="../assets/js/custom.js"></script>
+<!-- AJAX Js-->
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/toaster.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // toastr.error('test error');
+        // $('.selectpicker').selectpicker();
+    });
+</script>
+
+</body>
+</html>
+

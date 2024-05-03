@@ -1,0 +1,12 @@
+/backend/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+
+.phpunit.result.cache
+/backend/public/files
+/backend/public/uploads
+/frontend/node_modules/*
+
+f r o n t e n d / n o d e _ m o d u l e s / . c a c h e  
+ 

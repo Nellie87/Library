@@ -1,0 +1,11 @@
+
+.login-profile-area{
+	display: none;
+}
+#sidebar .sidebar-search {
+    display: block;
+}
+.top-categories .col-xl-5{
+    flex: 0 0 100% ;
+    max-width: 100% ;
+}

@@ -1,0 +1,38 @@
+.table tbody tr td .bar-img img{width:50px;}
+.table thead tr th{white-space:nowrap;}
+.table tbody tr td.min300{
+	width:300px;max-width:300px;white-space:normal;word-break:break-all;
+}
+.table .godropdown .go-dropdown-toggle{
+	white-space:nowrap;padding: 7px 20px; 
+}
+.bootstrap-select{
+	width:100% !important;
+}
+.bootstrap-select.input-field{
+	padding:0 !important;border:0;
+}
+.input-field{
+	padding:5px 15px !important;
+}
+.bootstrap-select .dropdown-toggle{
+	background:transparent !important;
+	outline:0 !important;box-shadow:none !important;font-size:14px;
+}
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+    outline: inherit !important;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+.bootstrap-select .dropdown-menu .inner li a{
+	font-size:14px;padding: 5px 15px;color:#000 !important;
+}
+.bootstrap-select .dropdown-menu .inner li a:hover,.bootstrap-select .dropdown-menu .inner li a.active,
+.bootstrap-select .dropdown-menu .inner li a:focus{
+ background:#BC7400;color:#fff !important;
+}
+.bootstrap-select .dropdown-menu{
+	    min-width: 100% !important;
+    transform: inherit !important;
+    top: 35px !important;
+}

@@ -1,0 +1,12 @@
+# Disable index view
+Options -Indexes
+
+#set upload file size in php ini
+php_value upload_max_filesize 5120M
+php_value post_max_size 5120M
+
+# Hide a specific file
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>

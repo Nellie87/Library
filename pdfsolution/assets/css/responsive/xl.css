@@ -1,0 +1,43 @@
+
+.collection-tabs .nav-item {
+    /*width: calc((100% / 4) - 20px);*/
+}
+
+.collection-tabs .nav-item .nav-link::after{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+    border-top: 0;
+    border-right: 80px solid transparent;
+    border-bottom: 20px solid;
+    border-left: 80px solid transparent;
+    bottom: -40px;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+}
+.collection-tabs .nav-item .nav-link.active:after {
+    bottom: -20px;
+    opacity: 1;
+}
+.cover-book-wrap .book-card-wrap .img-wrap {
+    width: 204px;
+    height: 313px;
+}
+.books-cover .book-wrap-card .img-wrap{
+    width: 100%;
+    height: 255px;
+}
+
+.books-cover.top-categories .book-wrap-card .img-wrap {
+    height:265px;
+}
+
+

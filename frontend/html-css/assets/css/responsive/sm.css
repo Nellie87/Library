@@ -1,0 +1,9 @@
+.menu-search-box {
+    display: none;
+}
+.login-profile-area{
+	display: none;
+}
+#sidebar .sidebar-search {
+    display: block;
+}

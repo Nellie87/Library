@@ -1,0 +1,1365 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="GeniusOcean">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- Title -->
+    <title>KNLS | Admin</title>
+    <!-- favicon -->
+    <link rel="icon" href="../images/favicon.png" type="image/gif">
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css?v=1.0.1" rel="stylesheet"/>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/fontawesome.css?v=1.0.1">
+    <!-- icofont -->
+    <link rel="stylesheet" href="../css/icofont.min.css?v=1.0.1">
+    <!-- Sidemenu Css -->
+    <link href="../plugins/fullside-menu/css/dark-side-style.css?v=1.0.1" rel="stylesheet"/>
+    <link href="../plugins/fullside-menu/waves.min.css?v=1.0.1" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/slick.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/slick-theme.css?v=1.0.1">
+    <link href="../css/plugin.css?v=1.0.1" rel="stylesheet"/>
+
+    <link href="../css/jquery.tagit.css?v=1.0.1" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/bootstrap-coloroicker.css?v=1.0.1">
+    <!-- Main Css -->
+    <!--Select Picker-->
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css?v=1.0.1" type="text/css">
+    <!--Select Picker End-->
+    <!-- stylesheet -->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js?v=1.0.1"></script>
+
+
+    <link href="../css/style.css?v=1.0.1" rel="stylesheet"/>
+    <link href="../css/custom.css?v=1.0.1" rel="stylesheet"/>
+    <link href="../css/common.css?v=1.0.1" rel="stylesheet"/>
+    <link href="../css/customnew.css?v=1.0.1" rel="stylesheet"/>
+    <link href="../css/toaster.css?v=1.0.1" rel="stylesheet" type="text/css"/>
+
+    <!-- responsive css -->
+    <link href="../css/responsive/responsive.css?v=1.0.1" rel="stylesheet" type="text/css"/>
+    <link rel='stylesheet' media='screen and (max-width: 320px)' href='../css/responsive/xs.css' />
+    <link rel='stylesheet' media='screen and (max-width: 768px)' href='../css/responsive/sm.css' />
+    <link rel='stylesheet' media='screen and (min-width: 768px)' href='../css/responsive/md.css' />
+    <link rel='stylesheet' media='screen and (min-width: 992px)' href='../css/responsive/lg.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1200px)' href='../css/responsive/xl.css' />
+    <!-- responsive css -->
+
+</head>
+
+<body>
+<div class="page">
+    <div class="page-main">
+        <!-- Header Menu Area Start -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center logo_wrap">
+                         <div class="menu-toggle-button">
+                            <a class="nav-link " href="javascript:;" id="sidebarCollapse">
+                                <div class="my-toggl-icon">
+                                    <span class="bar1"></span>
+                                    <span class="bar2"></span>
+                                    <span class="bar3"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <a class="admin-logo" href="#" target="_blank">
+                            <img src="../images/logo.png"/>
+                        </a>
+                    </div>
+                    <div class="right_wrap pl-0 pl-md-4">
+                        <div class="menu-search-box">
+                            <input type="text" placeholder="Search Books, Author, Publisher" class="search-box m-0">
+                            <span class="fa fa-search"></span>
+                        </div>
+                        <div class="right-eliment">
+                            <ul class="list">
+
+                                <!-- <li class="bell-area">
+                                    <a id="notf_conv" class="dropdown-toggle-1" href="javascript:;">
+                                        <i class="far fa-envelope"></i>
+                                        <span data-href="#" id="conv-notf-count">0</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdownmenu-wrapper" data-href="#" id="conv-notf-show">
+                                        </div>
+                                    </div>
+                                </li> -->
+
+                                
+
+                                <li class="login-profile-area">
+                                    <a class="dropdown-toggle-1" href="javascript:;">
+                                        <div class="user-img">
+                                       <span ></span>     <img src="../images/user.png" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdownmenu-wrapper">
+                                            <ul>
+                                                <h5>Welcome</h5>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-user"></i> Edit Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-cog"></i> Change Password</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fas fa-power-off"></i>Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Menu Area End -->
+        <div class="wrapper">
+            <!-- Side Menu Area Start -->
+            <nav id="sidebar" class="nav-sidebar">
+                <ul class="list-unstyled components" id="accordion">
+                    <li>
+                        <div class="sidebar-search">
+                            <input type="text" placeholder="Search Books, Author, Publisher" class="search-box">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="wave-effect sidebar-menu active"><img src="../images/icons/home.png" width="26" class="mr-2" alt="Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="wave-effect sidebar-menu "><img src="../images/icons/book.png" width="26" class="mr-2" alt="My Books">My Books</a>
+                    </li>
+                    <li>
+                        <a href="#" class="wave-effect sidebar-menu "><img src="../images/icons/setting.png" width="26" class="mr-2" alt="Settings">Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="wave-effect sidebar-menu "><img src="../images/icons/help.png" width="26" class="mr-2" alt="Help">Help & Support</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- Main Content Area Start -->
+            <div class="content-area">
+                <div class="row-cards-one dashboard-box">
+                    <h3 class="dashboard-title title-margin">Continue Reading</h3>
+                    <div class="top-books">
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image1.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        The House of
+                                    </div>
+                                    <p>
+                                        Dambudzo Marechera
+                                    </p>
+                                    <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">20% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image2.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Thirteen Mont
+                                    </div>
+                                    <p>
+                                        Rania Mamoun
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">80% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image3.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Hunger Eats  
+                                    </div>
+                                    <p>
+                                        Nkosinathi Sithole
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">50% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image4.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Daughters wh
+                                    </div>
+                                    <p>
+                                        Yejide Kilanko
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">10% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image2.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Thirteen Mont
+                                    </div>
+                                    <p>
+                                        Rania Mamoun
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">80% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image3.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Hunger Eats  
+                                    </div>
+                                    <p>
+                                        Nkosinathi Sithole
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">50% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card-wrap">
+                            <div class="book-card ebook">
+                                <div class="img-wrap float-left">
+                                    <img src="../images/books/Image4.png" alt="books">
+                                </div>
+                                <div class="book-details float-left">
+                                    <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                    <div class="book-name">
+                                        Daughters wh
+                                    </div>
+                                    <p>
+                                        Yejide Kilanko
+                                    </p>
+                                     <div class="book-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                        <span>4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-wrap">
+                            <div class="text-right">10% Completed</div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-cards-one dashboard-box">
+                    <h3 class="dashboard-title title-margin">My Collection</h3>
+                    <ul class="nav collection-tabs nav-tabs border-0" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link border-0 active" id="ebooks-tab" data-toggle="tab" href="#ebooks" role="tab" aria-controls="ebooks" aria-selected="true"><img src="../images/icons/ebook.svg" width="40" alt=""> E-Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-0" id="audio-books-tab" data-toggle="tab" href="#audio-books" role="tab" aria-controls="audio-books" aria-selected="false"><img src="../images/icons/audio-books.svg" width="38" alt="">Audio Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-0" id="video-books-tab" data-toggle="tab" href="#video-books" role="tab" aria-controls="video-books" aria-selected="false"><img src="../images/icons/videobook.svg" width="46" alt="">Video Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link border-0" id="slides-tab" data-toggle="tab" href="#slides" role="tab" aria-controls="slides" aria-selected="false"><img src="../images/icons//slides-icon.svg" width="32" alt=""> Slides</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="my-collection">
+                        <div class="tab-pane fade show active" id="ebooks" role="tabpanel" aria-labelledby="ebooks-tab">
+                            <div class="cover-book-wrap p-4">   
+                                <div class="cover-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="row-cards-one dashboard-box">
+                                <h3 class="dashboard-title title-margin mb-0">Recommended For You</h3>
+                                <p class="heading-info title-margin mt-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text</p>
+                                <div class="top-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    The House of
+                                                </div>
+                                                <p>
+                                                    Dambudzo Marechera
+                                                </p>
+                                                <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">20% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-cards-one dashboard-box">
+                                <h3 class="dashboard-title title-margin mb-0">Popular Authors</h3>
+                                <p class="heading-info title-margin mt-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text</p>
+                                <div class="top-books">
+                                    
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    The House of
+                                                </div>
+                                                <p>
+                                                    Dambudzo Marechera
+                                                </p>
+                                                <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">20% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    The House of
+                                                </div>
+                                                <p>
+                                                    Dambudzo Marechera
+                                                </p>
+                                                <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">20% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    The House of
+                                                </div>
+                                                <p>
+                                                    Dambudzo Marechera
+                                                </p>
+                                                <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">20% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="audio-books" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="cover-book-wrap p-4">   
+                                <div class="cover-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="row-cards-one dashboard-box">
+                                <h3 class="dashboard-title title-margin mb-0">Recommended For You</h3>
+                                <p class="heading-info title-margin mt-0">Lorem ipsum, or lipsum as it is sometimes known, is dummy text</p>
+                                <div class="top-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/book-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    The House of
+                                                </div>
+                                                <p>
+                                                    Dambudzo Marechera
+                                                </p>
+                                                <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">20% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/video-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Thirteen Mont
+                                                </div>
+                                                <p>
+                                                    Rania Mamoun
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">80% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/audio-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Hunger Eats  
+                                                </div>
+                                                <p>
+                                                    Nkosinathi Sithole
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">50% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                            <div class="book-details float-left">
+                                                <img src="../images/icons/slides-tag.svg" class="tag-icon" width="75" alt="">
+                                                <div class="book-name">
+                                                    Daughters wh
+                                                </div>
+                                                <p>
+                                                    Yejide Kilanko
+                                                </p>
+                                                 <div class="book-rating">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-half-alt" aria-hidden="true"></i>
+                                                    <span>4.5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-wrap">
+                                        <div class="text-right">10% Completed</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="video-books" role="tabpanel" aria-labelledby="video-books-tab">
+                            <div class="cover-book-wrap p-4">   
+                                <div class="cover-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="slides" role="tabpanel" aria-labelledby="slides-tab">
+                            <div class="cover-book-wrap p-4">   
+                                <div class="cover-books">
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image1.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image2.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image3.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book-card-wrap">
+                                        <div class="book-card ebook">
+                                            <div class="img-wrap float-left">
+                                                <img src="../images/books/Image4.png" alt="books">
+                                            </div>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>    
+                </div>
+
+            </div>
+            <!-- Main Content Area End -->
+
+        </div>
+    </div>
+</div>
+<!-- Dashboard Core -->
+<script src="../js/popper.min.js?v=1.0.1"></script>
+<script src="../js/vendors/jquery-1.12.4.min.js?v=1.0.1"></script>
+<script src="../js/vendors/vue.js?v=1.0.1"></script>
+<script src="../js/vendors/bootstrap.min.js?v=1.0.1"></script>
+<script src="../js/jqueryui.min.js?v=1.0.1"></script>
+<script src="../js/bootstrap-select.min.js?v=1.0.1"></script>
+<!-- Fullside-menu Js-->
+<script src="../plugins/fullside-menu/jquery.slimscroll.min.js?v=1.0.1"></script>
+<script src="../plugins/fullside-menu/waves.min.js?v=1.0.1"></script>
+<script src="../js/plugin.js?v=1.0.1"></script>
+<script src="../js/Chart.min.js?v=1.0.1"></script>
+<script src="../js/tag-it.js?v=1.0.1"></script>
+<script src="../js/nicEdit.js?v=1.0.1"></script>
+<script src="../js/bootstrap-colorpicker.min.js?v=1.0.1"></script>
+<script src="../js/jsvalidation.js?v=1.0.1"></script>
+<script src="../js/toastr.min.js?v=1.0.1"></script>
+<script src="../js/bootbox.min.js?v=1.0.1"></script>
+<script src="../js/notify.js?v=1.0.1"></script>
+
+<script src="../js/jquery.canvasjs.min.js?v=1.0.1"></script>
+<script src="../js/slick.min.js?v=1.0.1"></script>
+
+<script src="../js/load.js?v=1.0.1"></script>
+<!-- Custom Js-->
+<script src="../js/custom.js?v=1.0.1"></script>
+<!-- AJAX Js-->
+<script src="../js/common.js?v=1.0.1"></script>
+<script src="../js/toaster.js?v=1.0.1"></script>
+
+<script>
+    $(document).ready(function () {
+        // toastr.error('test error');
+        // $('.selectpicker').selectpicker();
+    });
+</script>
+
+</body>
+</html>
+
