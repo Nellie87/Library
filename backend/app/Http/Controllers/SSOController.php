@@ -46,6 +46,8 @@ class SSOController extends Controller
 
         return redirect("https://accounts.ecitizen.go.ke/oauth/authorize?{$query}");
     }
+
+
     function membershipUpdate(Request $request)
     {
 
@@ -82,6 +84,8 @@ class SSOController extends Controller
             return response()->json(['message' => 'ERROR OCCURRED'], 404);
         }
     }
+    
+    
     function paymentcallback(Request $request)
     {
 
@@ -182,6 +186,7 @@ class SSOController extends Controller
         return $transactionResult;
     }
 
+    
     function createOrderEntry( $invoice,  $transactionResult,  $depositResponse)
     {
         if ($invoice->payment_for == 'cart') {
@@ -646,6 +651,7 @@ class SSOController extends Controller
         }
     }
 
+    
     public function getUser(Request $request): JsonResponse
     {
         $req = $request->all();

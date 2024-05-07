@@ -1,0 +1,68 @@
+[2024-05-06 07:00:23] production.INFO: registration  
+[2024-05-06 07:00:24] production.INFO: check indentification:null  
+[2024-05-06 07:00:24] production.INFO: user detail  
+[2024-05-06 07:00:24] production.INFO: Array
+(
+    [user_id] => 2753
+    [identification_number] => 22200396
+    [identification_type] => 1
+    [country] => Kenya
+    [state] => Nairobi
+    [city] => Nairobi
+    [address] => Musa Gitau Road
+    [gender] => M
+    [dob] => 1981/06/14
+)
+  
+[2024-05-06 07:00:24] production.INFO: key insert audit  
+[2024-05-06 07:05:13] production.INFO: token found  
+[2024-05-06 07:05:59] production.INFO: key insert audit  
+[2024-05-06 07:06:11] production.INFO: key insert audit  
+[2024-05-06 07:06:17] production.INFO: key insert audit  
+[2024-05-06 07:06:20] production.INFO: key insert audit  
+[2024-05-06 07:06:28] production.INFO: MEMBERSHIP UPDATE- Request Data: 2753  
+[2024-05-06 07:06:28] production.INFO: updated MEMBERSHIP:{"is_membership_user":0}  
+[2024-05-06 07:06:32] production.INFO: create_reader_content  
+[2024-05-06 07:06:32] production.INFO: Array
+(
+    [content_id] => 6541
+    [reader_id] => 2753
+    [subscription_on] => 2024-05-06
+    [subscription_end] => 2024-06-05
+)
+  
+[2024-05-06 07:09:13] production.INFO: MEMBERSHIP UPDATE- Request Data: 2753  
+[2024-05-06 07:09:13] production.INFO: updated MEMBERSHIP:{"is_membership_user":0}  
+[2024-05-06 07:09:20] production.INFO: create_reader_content  
+[2024-05-06 07:09:20] production.INFO: Array
+(
+    [content_id] => 2246
+    [reader_id] => 2753
+    [subscription_on] => 2024-05-06
+    [subscription_end] => 
+)
+  
+[2024-05-06 07:11:52] production.INFO: MEMBERSHIP UPDATE- Request Data: 2753  
+[2024-05-06 07:11:52] production.INFO: updated MEMBERSHIP:{"is_membership_user":0}  
+[2024-05-06 07:22:16] production.INFO: key insert audit  
+[2024-05-06 07:22:21] production.INFO: MEMBERSHIP UPDATE- Request Data: 2753  
+[2024-05-06 07:22:21] production.INFO: updated MEMBERSHIP:{"is_membership_user":0}  
+[2024-05-06 07:22:24] production.INFO: create_reader_content  
+[2024-05-06 07:22:24] production.INFO: Array
+(
+    [content_id] => 6979
+    [reader_id] => 2753
+    [subscription_on] => 2024-05-06
+    [subscription_end] => 2024-06-05
+)
+  
+[2024-05-06 07:22:33] production.INFO: MEMBERSHIP UPDATE- Request Data: 2753  
+[2024-05-06 07:22:33] production.INFO: updated MEMBERSHIP:{"is_membership_user":0}  
+[2024-05-06 07:22:34] production.INFO: key insert audit  
+[2024-05-06 07:24:26] production.INFO: key insert audit  
+[2024-05-06 07:24:29] production.INFO: key insert audit  
+[2024-05-06 07:24:32] production.INFO: key insert audit  
+[2024-05-06 08:42:15] production.INFO: key insert audit  
+[2024-05-06 09:57:03] production.INFO: token found  
+[2024-05-06 12:43:56] production.INFO: token found  
+[2024-05-06 13:30:17] production.INFO: token found  
