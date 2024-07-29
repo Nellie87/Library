@@ -42,7 +42,8 @@ a.admin-logo img {
 .right_wrap{
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 266px);
+    /* width: calc(100% - 266px); */
+    width: 100%;
     align-items: center;
 }
 .page .header .menu-toggle-button .nav-link{
@@ -169,11 +170,11 @@ a.admin-logo img {
 }
 .publisher-card .card-title{
     font-family: 'planet_estyleregular';
-    color: #ffffff;   
+    color: #ffffff;
 }
 .publisher-card .number{
     font-family: 'planet_estyleregular';
-    color: #ffffff;   
+    color: #ffffff;
 }
 .publisher-card.ebook {
     background-image: linear-gradient(-45deg, #cb02ff  , #9307ea 25% , #cb02ff 75%);
@@ -189,10 +190,10 @@ a.admin-logo img {
 }
 .popular-book {
     background: #ffffff;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 .popular-book .book-image img{
-    height: 500px;    
+    height: 500px;
     width: 100%;
 }
 .popular-book .book-details {
@@ -327,7 +328,7 @@ a.admin-logo img {
     height: 9px;
     background: #CBCBCB 0% 0% no-repeat padding-box;
     border-radius: 100px;
-    
+
 }
 .progress-bar {
     background: #EC450A;

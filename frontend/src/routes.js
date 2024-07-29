@@ -201,7 +201,7 @@ class Routes extends React.Component {
    
 
     getPermission() {
-        let permissiondetail = AUTH_USER.user.persmission;
+        let permissiondetail = AUTH_USER.user.permission;
         if(AUTH_USER != null && permissiondetail && permissiondetail.length &&  permissiondetail.length>0){
             for(let i=0; i< permissiondetail.length; i++){
                 console.log(permissiondetail[i].permission)
@@ -412,7 +412,7 @@ class Routes extends React.Component {
                                             <Route exact path="/checkout-page" render={(props) => <Layout maincontent={MyCart} {...props} />} />
                                             <Route exact path="/reader-profile"  render={(props) => <Layout maincontent={ReaderProfile} {...props} />} />
 
-                                                <Route exact path="/pesaflow/callback" render={(props) => <Layout maincontent={PaymentCallbackComponent} {...props} />} />
+                                            <Route exact path="/pesaflow/callback" render={(props) => <Layout maincontent={PaymentCallbackComponent} {...props} />} />
                                             <Route exact path="/discussions"  render={(props) => <Layout maincontent={Discussions} {...props} />} />
                                             <Route exact path="/add-discussion"  render={(props) => <Layout maincontent={AddDiscussion} {...props} />} />
                                             

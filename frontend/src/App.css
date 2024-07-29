@@ -1,3 +1,4 @@
+/* App General Styles */
 .App {
   text-align: center;
 }
@@ -34,5 +35,63 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Header Specific Styles */
+/* .header_search_bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.header_search_bar input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in total width */
+
+
+@media (max-width: 1200px) {
+  .header_search_bar {
+    width: 100%;
+    margin: 5px 0; /* Optional: adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .header_search_bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_search_bar {
+    width: 100%;
+    flex-direction: column; /* Optional: stack elements vertically */
+  }
+}
+
+@media (max-width: 576px) {
+  .header_search_bar {
+    width: 100%;
+  }
+
+  .right_wrap {
+    padding-left: 0 !important;
+  }
+
+  .login-profile-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
   }
 }

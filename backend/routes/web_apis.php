@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\SSOController;
-
-
 /** @var \Laravel\Lumen\Routing\Router $router */
 
 /*
@@ -39,15 +37,12 @@ $router->get('/temp-key', function () {
 $router->post('/audit-test', 'AuditController@index');
 $router->get('/upload-mrc', 'ContentController@contentUploadMrc');
 $router->get('/testing', 'PGController@testing');
-
 $router->post('/auth/login', 'ExampleController@postLogin');
-
 $router->get('/test-move', 'ContentController@testMove');
 $router->get('/viewpdf', 'UserController@viewPdf');
 $router->get('/webviewerpdf', 'UserController@webViewerPdf');
 $router->post('cs-payment-response', "PGController@cybersourcePaymentResponse");
 $router->group(['prefix' => 'wapi'], function () use ($router) {
-
 
     /**
      * Public routes

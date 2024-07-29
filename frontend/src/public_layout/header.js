@@ -3,43 +3,36 @@ import { Link } from "react-router-dom";
 import Functions from "../helpers/functions";
 import SsologinButton from '../public_pages/ssoLogin';
 import Swal from "sweetalert2";
+
 const funcObj = new Functions();
 const AUTH_USER = funcObj.getAuthUser();
+
 export default class PublicHeader extends React.Component {
     constructor(props) {
         super(props);
         let search_text = funcObj.get_query_string('search_text');
         this.state = {
-            classes:{},
-            suggesion_list:["sample"],
-            search_text:search_text      
+            classes: {},
+            suggesion_list: ["sample"],
+            search_text: search_text      
         };
-      this.setClasses = this.setClasses.bind(this);
+        this.setClasses = this.setClasses.bind(this);
     }
 
     quickSearch(e) {
-        //   //  console.log('typing..');
-        //     const arr = ["Nkosinathi Sithole","Yejida kilanko","Rania Mamoun","ebooks","audio","video","slides","ppt","The house of hunger","Thirteen months of sunrise","daughters who walk this path","Hunger eats a man"];
-        //     this.autocomplete(e.target,arr);
         let search_text = document.getElementById('searchInp').value;
-
         window.location = funcObj.getSitePath('dbooks?search_text=' + search_text);
-
-
     }
 
-   
     componentDidMount(){
         this.setClasses();
     }
+
     async setSuggestionList() {
         let search_for = 'all';
         if (document.getElementById('search_for')) {
             search_for = document.getElementById('search_for').value;
         }
-
-       
-
         let postBodyData = {
             search_for: search_for
         };
@@ -50,10 +43,12 @@ export default class PublicHeader extends React.Component {
         const result = await funcObj.commonFetchApiCall(postBodyData, endPoint, 'POST', false, false);
         return result;
     }
-    callSearch(e,classes){
+
+    callSearch(e, classes) {
         e.preventDefault();
         funcObj.callSearch(classes);
     }
+
     setClasses(){        
         const endPoint = 'get-contents-classes-public';
         let postBodyData = {};
@@ -62,7 +57,6 @@ export default class PublicHeader extends React.Component {
             if (data && data.code == 200 && data.data) {
                 this.setState({ classes: data.data });
             }
-
         });
     }
 
@@ -72,57 +66,39 @@ export default class PublicHeader extends React.Component {
         }
     }
        
-    onChangeSearchInput(event,suggestion_list) {
+    onChangeSearchInput(event, suggestion_list) {
         if(event.key === "Enter"){
             openSearchPage(event.target.value)
         }
         
         const listPromise = this.setSuggestionList();
-     
         listPromise.then(response => {
-            console.log('setSuggestionList called')
             if (response.code == 200) {
                 const suggesion_list = response.data;
-               // console.log('suggesion_list',suggesion_list)
                 if (document.getElementById("searchInp")) {
-                    console.log('calling autocomplete')
-                    autocomplete(document.getElementById("searchInp"),suggesion_list);
+                    autocomplete(document.getElementById("searchInp"), suggesion_list);
                 }
-        
-            }else{
-                autocomplete(document.getElementById("searchInp"),[]);
+            } else {
+                autocomplete(document.getElementById("searchInp"), []);
             }
         });
-        
-      }
+    }
+
     logout() {
         let user = funcObj.getLocalStorage('user');
-
-
         let postBodyData = {
             "email": user.email
         };
         let endPoint = 'logout';
         funcObj.commonFetchApiCall(postBodyData, endPoint).then(data => {
-            console.log('logout response', data)
-
             if (data.code == 200) {
-
-                this.setState({
-                    // authentication:true,
-                    // login_success:true,
-                    // user:data.data
-                });
+                this.setState({});
                 funcObj.removeLocalStorage('user');
                 window.location.href = funcObj.getSitePath("home");
-
-            } else if (data.code == 201) {
-
             }
         });
-        // funcObj.removeLocalStorage('user');
-        // window.location.href = funcObj.getSitePath("");
     }
+
     custom_confirm_box(e) {
         Swal.fire({
             title: 'Are you sure you want to exit?',
@@ -134,7 +110,8 @@ export default class PublicHeader extends React.Component {
             }
         })
     };
-      quickSearchBtn(e,searchInp){
+
+    quickSearchBtn(e, searchInp) {
         let searchVal = '';
         if (document.getElementById(searchInp)) {
             searchVal = document.getElementById(searchInp).value;
@@ -143,173 +120,171 @@ export default class PublicHeader extends React.Component {
         if (document.getElementById('search_for')) {
             search_for = document.getElementById('search_for').value;
         }
-        openSearchPage(searchVal,search_for);
+        openSearchPage(searchVal, search_for);
     }
 
     render() {
         let search_for = funcObj.get_query_string('search_for');
         let cart_items_length = funcObj.get_cart_items_length();
         let login_dash = 'login';
+    
         if (AUTH_USER != null) {
-
-            if ((AUTH_USER.account_type == 'reader' || AUTH_USER.account_type == 'junior_reader')) {
-                login_dash = 'reader-dashboard';
-            } else if (AUTH_USER.account_type == 'publisher') {
-                login_dash = 'publisher-dashboard';
-            } else if (AUTH_USER.account_type == 'admin') {
-                login_dash = 'admin-dashboard';
-            } else if (AUTH_USER.account_type == 'staff') {
-                login_dash = 'staff-dashboard';
+            switch (AUTH_USER.account_type) {
+                case 'reader':
+                case 'junior_reader':
+                    login_dash = 'reader-dashboard';
+                    break;
+                case 'publisher':
+                    login_dash = 'publisher-dashboard';
+                    break;
+                case 'admin':
+                    login_dash = 'admin-dashboard';
+                    break;
+                case 'staff':
+                    login_dash = 'staff-dashboard';
+                    break;
+                default:
+                    login_dash = 'login';
             }
-
-
         }
-
+    
         return (
             <React.Fragment>
-                <nav className="navbar navbar-expand-lg my-header py-3 bg-white position-relative" >
-                    <div className="container">
-                        <Link className="admin-logo" to="/home">
-                            <img  className="main_logo" src={funcObj.get_logo()} alt="knls logo" />
-                        </Link>
+    <nav className="navbar navbar-expand-lg my-header py-3 bg-white position-relative">
+        <div className="container">
+            <Link className="admin-logo" to="/home">
+                <img className="main_logo" src={funcObj.get_logo()} alt="knls logo" />
+            </Link>
+            
+            <button 
+                className="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+            >
+                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto public_page">
+                    <li className="nav-item dropdown">
                         <div className="right_wrap pl-0 pl-md-4">
-                        <div className='row header_search_bar public_search'>
-
-
-<div className="customs_wrapper">
-    <div className="search_box">
-        <div className="dropdown">
-            <select name='search_for' defaultValue={search_for} id='search_for' aria-label="Search by" onChange={(e) => this.onchangeSearchFor(e)}>
-            {
-                                        Object.keys(funcObj.headerSearchOptions()).map(function (key){
-                                            return <option key={key} value={key}>{funcObj.headerSearchOptions()[key]}</option>
-                                        })
-                                    }
-            </select>
-        </div>
-        <div className="search_field">
-            <input type="text"
-                name="searchInp"
-                id="searchInp"
-                placeholder="Search content"
-                className="input"
-                autoComplete="off"
-                onPaste={(e) => this.onChangeSearchInput(e,this.state.suggesion_list)}
-                onKeyPress={(e) => this.onChangeSearchInput(e,this.state.suggesion_list)}
-                onKeyUp={(e) => this.onChangeSearchInput(e,this.state.suggesion_list)}
-                defaultValue={this.state.search_text}
-            />
-
-            <i onClick={(e) => this.quickSearchBtn(e, "searchInp")} className="fas fa-search"></i>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-</div>
-                        </div>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                            <span className="navbar-toggler-icon"></span>
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ssologinButton/>
-                            <ul className="navbar-nav ml-auto public_page">
-
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Library
-                                    </Link>
-
-                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    {
-                                                        this.state.classes && Object.keys(this.state.classes).length > 0 ?
-                                                            this.state.classes.map((classd, index) => {
-                                                                return (
-                                                                    <React.Fragment  key={index}>
-                                                                    <Link className="dropdown-item" to="" onClick={(e)=>this.callSearch(e,classd.class_id)}>{classd.class_name}</Link>
-                                                                    </React.Fragment>
-
-                                                                )
-                                                            })
-                                                            : null}
-
-
-                                        {/* <Link className="dropdown-item" to="/dbooks?q=4">Slides</Link> */}
+                            <div className='row header_search_bar public_search'>
+                                <div className="customs_wrapper d-flex">
+                                    <div className="search_box d-flex">
+                                        <div className="dropdown">
+                                            <select 
+                                                name='search_for' 
+                                                defaultValue={search_for} 
+                                                id='search_for' 
+                                                aria-label="Search by" 
+                                                onChange={(e) => this.onchangeSearchFor(e)}
+                                            >
+                                                {Object.keys(funcObj.headerSearchOptions()).map((key) => (
+                                                    <option key={key} value={key}>
+                                                        {funcObj.headerSearchOptions()[key]}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="search_field">
+                                            <input 
+                                                type="text"
+                                                name="searchInp"
+                                                id="searchInp"
+                                                placeholder="Search content"
+                                                className="input"
+                                                autoComplete="off"
+                                                onPaste={(e) => this.onChangeSearchInput(e, this.state.suggesion_list)}
+                                                onKeyPress={(e) => this.onChangeSearchInput(e, this.state.suggesion_list)}
+                                                onKeyUp={(e) => this.onChangeSearchInput(e, this.state.suggesion_list)}
+                                                defaultValue={this.state.search_text}
+                                            />
+                                            <i onClick={(e) => this.quickSearchBtn(e, "searchInp")} className="fas fa-search"></i>
+                                        </div>
                                     </div>
-                                </li>
-
-
-                                <li className="nav-item px-0 mx-0 d-none d-lg-block">
-                                    <Link className="nav-link disabled" to="#">|</Link>
-                                </li>
-
-                                {
-                                    AUTH_USER == null || AUTH_USER != null && (AUTH_USER.account_type == 'reader' || AUTH_USER.account_type == 'junior_reader') ?
-                                        <li className="nav-item  d-none d-lg-block shopping-cart">
-                                            <Link className="nav-link" to="/shopping-cart">
-                                                <img src={funcObj.assets_path("/images/icons/shopping-cart.png")} alt="shopping-cart" />
-                                                <span className="count" id="cart_count" >{cart_items_length}</span>
-                                            </Link>
-                                        </li>
-                                        : null
-                                }
-
-                                { AUTH_USER == null ? (
-                                    <li className="nav-item mg-w">
-                                        <SsologinButton />
-                                    </li>
-                                ) : (
-                                    <React.Fragment>
-                                        <li className="nav-item mg-w login-profile-area">
-                                            <span>
-                                               <i className="fas fa-user-circle"><p>{AUTH_USER.user.username}</p></i>
-                                                </span>
-
-                                        </li>
-                                        <li className="nav-item mg-w">
-                                            <a className="curptr" onClick={(e) => this.custom_confirm_box(e)} title="logout">
-                                                <i className="fas fa-power-off"></i>
-                                            </a>
-                                        </li>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li className="nav-item dropdown library-dropdown">
+                        <Link 
+                            className="nav-link dropdown-toggle" 
+                            to="#" 
+                            id="navbarDropdown" 
+                            role="button" 
+                            data-toggle="dropdown" 
+                            aria-haspopup="true" 
+                            aria-expanded="false"
+                        >
+                            Library
+                        </Link>
+                        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {this.state.classes && Object.keys(this.state.classes).length > 0 ? (
+                                this.state.classes.map((classd, index) => (
+                                    <React.Fragment key={index}>
+                                        <Link 
+                                            className="dropdown-item" 
+                                            to="" 
+                                            onClick={(e) => this.callSearch(e, classd.class_id)}
+                                        >
+                                            {classd.class_name}
+                                        </Link>
                                     </React.Fragment>
-                                )}
-
-                                <li className='nav-item mg-w'>
-                                    <div>
-                                    <Link className="nav-link to_login bordered-link px-4 btn-signup d-inline-block " to={login_dash}  >
-                                        {
-                                            AUTH_USER != null ?
-                                                "Dashboard" : "Staff Login"
-                                        }
-
-                                    </Link>
-                                    </div>
-
-                                </li>
-                                {/*{*/}
-                                {/*    AUTH_USER == null ?*/}
-                                {/*        <li className="nav-item mg-w">*/}
-                                {/*            <Link className="nav-link bordered-link px-4 btn-signup d-inline-block to_register" to="registration"  >Register</Link>*/}
-                                {/*        </li>*/}
-                                {/*        : null*/}
-                                {/*}*/}
-                            </ul>
+                                ))
+                            ) : null}
                         </div>
+                    </li>
 
-                    </div>
-                </nav>
+                    <li className="nav-item px-0 mx-0 d-none d-lg-block">
+                        <Link className="nav-link disabled" to="#">|</Link>
+                    </li>
+
+                    {AUTH_USER == null || (AUTH_USER.account_type === 'reader' || AUTH_USER.account_type === 'junior_reader') ? (
+                        <li className="nav-item d-none d-lg-block shopping-cart">
+                            <Link className="nav-link" to="/shopping-cart">
+                                <img src={funcObj.assets_path("/images/icons/shopping-cart.png")} alt="shopping-cart" />
+                                <span className="count" id="cart_count">{cart_items_length}</span>
+                            </Link>
+                        </li>
+                    ) : null}
+
+                    {AUTH_USER == null ? (
+                        <li className="nav-item mg-w">
+                            <SsologinButton />
+                        </li>
+                    ) : (
+                        <React.Fragment>
+                            <li className="nav-item mg-w login-profile-area">
+                                <span>
+                                    <i className="fas fa-user-circle">
+                                        <p>{AUTH_USER.user.username}</p>
+                                    </i>
+                                </span>
+                            </li>
+                            <li className="nav-item mg-w">
+                                <Link className="nav-link" to="" onClick={(e) => this.custom_confirm_box(e)}>Logout</Link>
+                            </li>
+                            <li className="nav-item mg-w">
+                                <Link className="nav-link" to={login_dash}>My Account</Link>
+                            </li>
+                        </React.Fragment>
+                    )}
+                </ul>
+            </div>
+        </div>
+    </nav>
             </React.Fragment>
+
         );
     }
-
 }
+
 
 
 function autocomplete(inp, arr) {

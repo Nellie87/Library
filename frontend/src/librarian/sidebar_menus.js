@@ -82,11 +82,11 @@ class LibrarianSidebarMenus extends React.Component{
         const {pathname,activeclass,normalclass,submenu }=this.state;
         return (
             <React.Fragment>
-                      {/* <li>
+                      { <li>
                             <div className="sidebar-search">
                                 <input type="text" placeholder="Search content title, isbn, author, publisher" className="search-box" />
                         </div>
-                    </li> */}
+                    </li> }
                             <li>
                                 <Link className={ (pathname =='dashboard' || pathname == '') ? activeclass : normalclass } to="/dashboard"><img src={funcObj.assets_path("/images/icons/dashboard.svg")} width="24" className="mr-1" alt="Home" /> Dashboard</Link>
                             </li>

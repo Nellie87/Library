@@ -1,0 +1,90 @@
+[2024-05-21 05:56:53] production.INFO: Admin dashboard  
+[2024-05-21 05:56:53] production.INFO: Admin dashboard  
+[2024-05-21 05:56:53] production.INFO: Admin dashboard  
+[2024-05-21 05:56:53] production.INFO: Admin dashboard  
+[2024-05-21 05:56:53] production.INFO: filter:week  
+[2024-05-21 05:56:53] production.INFO: filter:week  
+[2024-05-21 05:56:53] production.INFO: filter:week  
+[2024-05-21 05:56:53] production.INFO: filter:week  
+[2024-05-21 05:56:54] production.INFO: user details  
+[2024-05-21 05:56:54] production.INFO: user details  
+[2024-05-21 05:56:54] production.INFO: user details  
+[2024-05-21 05:56:54] production.INFO: user details  
+[2024-05-21 05:56:56] production.INFO: Admin dashboard  
+[2024-05-21 05:56:56] production.INFO: filter:week  
+[2024-05-21 05:56:56] production.INFO: user details  
+[2024-05-21 07:56:47] production.INFO: user found  
+[2024-05-21 07:56:48] production.INFO: password matched  
+[2024-05-21 07:56:48] production.INFO: attempts_count 0 updated  
+[2024-05-21 07:56:48] production.INFO: token found  
+[2024-05-21 07:56:48] production.INFO: dontask:1 mobile:0719355027  
+[2024-05-21 07:56:50] production.INFO: Admin dashboard  
+[2024-05-21 07:56:50] production.INFO: filter:week  
+[2024-05-21 07:56:50] production.INFO: user details  
+[2024-05-21 07:57:19] production.INFO: Admin dashboard  
+[2024-05-21 07:57:19] production.INFO: filter:week  
+[2024-05-21 07:57:19] production.INFO: user details  
+[2024-05-21 07:57:28] production.INFO: Admin dashboard  
+[2024-05-21 07:57:28] production.INFO: filter:month  
+[2024-05-21 07:57:28] production.INFO: user details  
+[2024-05-21 07:59:29] production.INFO: Admin dashboard  
+[2024-05-21 07:59:29] production.INFO: filter:year  
+[2024-05-21 07:59:29] production.INFO: user details  
+[2024-05-21 07:59:33] production.INFO: Admin dashboard  
+[2024-05-21 07:59:33] production.INFO: filter:month  
+[2024-05-21 07:59:33] production.INFO: user details  
+[2024-05-21 08:01:48] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 16.52
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.43
+        )
+
+)
+  
+[2024-05-21 08:02:00] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 16.49
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.51
+        )
+
+)
+  
+[2024-05-21 08:02:13] production.INFO: get_role_and_permission  
+[2024-05-21 08:02:13] production.INFO: get_role_and_permission  
+[2024-05-21 08:03:13] production.INFO: getModule  
+[2024-05-21 08:03:13] production.INFO: getModule  
+[2024-05-21 08:03:19] production.INFO: getModule  
+[2024-05-21 08:03:19] production.INFO: getModule  
+[2024-05-21 08:03:22] production.INFO: Requests  

@@ -8,5 +8,3 @@ php_value post_max_size 5120M
     Order allow,deny
     Deny from all
 </Files>
-
-

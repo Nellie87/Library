@@ -2903,7 +2903,7 @@ form .form-group .form-control.multiple{
     overflow-y: auto;
     height: 200px;
 }
-.header_search_bar .search_for,.header_search_bar .search_for option{
+/* .header_search_bar .search_for,.header_search_bar .search_for option{
     font-size: 14px;
     width: 150px;
     border: none;
@@ -2915,45 +2915,63 @@ form .form-group .form-control.multiple{
     font-weight: 600!important;
     color: #6e6d6d!important;
     height: 40px;
+} */
+.header_search_bar .search_for,
+.header_search_bar .search_for option {
+    font-size: 14px;
+    width: 100%; /* Make it responsive */
+    max-width: 150px; /* Optional: maintain a max width */
+    border: none;
+    border-radius: 50px;
+    background: var(--color-light-gray);
+    letter-spacing: 0.1rem;
+    font-family: 'Planet-Estyle' !important;
+    font-weight: 600 !important;
+    color: #6e6d6d !important;
+    height: 40px;
+    box-sizing: border-box; /* Ensure padding/border are included in width/height */
 }
 
 
 
 /* header search css start */
 
-.customs_wrapper{
+.customs_wrapper {
     position: absolute;
     top: 50%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-  }
-  
-  .customs_wrapper .search_box {
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+}
+
+.customs_wrapper .search_box {
     width: 500px;
     background: #fff;
     border-radius: 50px;
     height: 50px;
     display: flex;
-    padding: 10px;
+    padding: 0; /* Remove padding for uniformity */
     border: 1px solid #c6c6c6;
+    align-items: center; /* Center items vertically */
 }
-  
+
 .customs_wrapper .search_box .dropdown {
     width: 150px;
     border-right: 1px solid #bdbdbd;
     color: #9fa3b1;
     position: relative;
     cursor: pointer;
-    padding-right: 5px;
+    display: flex;
+    align-items: center; /* Center items vertically */
 }
-  
-  .customs_wrapper .search_box .dropdown .default_option{
+
+.customs_wrapper .search_box .dropdown .default_option {
     text-transform: uppercase;
-    padding: 13px 15px;
+    padding: 0 15px; /* Center text vertically */
     font-size: 14px;
-  }
-  
-  .customs_wrapper .search_box .dropdown ul{
+    height: 100%; /* Ensure full height */
+}
+
+.customs_wrapper .search_box .dropdown ul {
     position: absolute;
     top: 70px;
     left: -10px;
@@ -2963,74 +2981,76 @@ form .form-group .form-control.multiple{
     padding: 20px;
     display: none;
     box-shadow: 8px 8px 6px -10px #b3c6ff;
-  }
-  
-  .customs_wrapper .search_box .dropdown ul.active{
+}
+
+.customs_wrapper .search_box .dropdown ul.active {
     display: block;
-  }
-  
-  .customs_wrapper .search_box .dropdown ul li{
+}
+
+.customs_wrapper .search_box .dropdown ul li {
     padding-bottom: 20px;
-  }
-  
-  .customs_wrapper .search_box .dropdown ul li:last-child{
+}
+
+.customs_wrapper .search_box .dropdown ul li:last-child {
     padding-bottom: 0;
-  }
-  
-  .customs_wrapper .search_box .dropdown ul li:hover{
+}
+
+.customs_wrapper .search_box .dropdown ul li:hover {
     color: #6f768d;
-  }
-  .customs_wrapper .search_box select{
+}
+
+.customs_wrapper .search_box select {
     width: 100%;
     height: 100%;
-    border: 0px;
+    border: 0;
     font-size: 15px;
     color: #6f768d;
-  }
-  
-  .customs_wrapper .search_box .search_field{
-    width: 350px;
-    height: 100%;
-    position: relative;
-  }
-  
-  .customs_wrapper .search_box .search_field .input{
+    padding: 0 15px; /* Consistent padding */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.customs_wrapper .search_box .search_field {
+    flex-grow: 1; /* Take remaining space */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.customs_wrapper .search_box .search_field .input {
     width: 100%;
     height: 100%;
-    border: 0px;
+    border: 0;
     font-size: 15px;
     color: #6f768d;
-    padding-left: 7px;
-  }
-  
-  .customs_wrapper .search_box .search_field .fas{
+    padding-left: 40px; /* Space for the icon */
+    border-radius: 0; /* Match dropdown */
+}
+
+.customs_wrapper .search_box .search_field .fas {
     position: absolute;
-    top: 7px;
-    right: 1px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
     font-size: 16px;
     color: #3c3293;
     cursor: pointer;
-  }
-  
-  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+}
+
+/* Placeholder styles */
+::-webkit-input-placeholder { 
     color: #9fa3b1;
-  }
-  ::-moz-placeholder { /* Firefox 19+ */
-   color: #9fa3b1;
-  }
-  :-ms-input-placeholder { /* IE 10+ */
+}
+::-moz-placeholder { 
     color: #9fa3b1;
-  }
+}
+:-ms-input-placeholder { 
+    color: #9fa3b1;
+}
 
-  .search_box select,.search_box input{
-      font-weight: 400;
-  }
+/* Consistent font weight */
+.search_box select, .search_box input {
+    font-weight: 400;
+}
 
-  .search_box select
-  {
-    padding: 0 18px 0px;
-
-  }
   /* header search css ends */
 
   .sidebar-search .fa{

@@ -250,7 +250,6 @@ class SSOController extends Controller
 
         }
         return true;
-
     }
 
 

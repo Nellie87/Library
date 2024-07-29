@@ -1,0 +1,291 @@
+[2024-05-18 07:22:32] production.INFO: user found  
+[2024-05-18 07:23:31] production.INFO: user found  
+[2024-05-18 07:23:31] production.INFO: password matched  
+[2024-05-18 07:23:31] production.INFO: attempts_count 0 updated  
+[2024-05-18 07:23:31] production.INFO: token found  
+[2024-05-18 07:23:31] production.INFO: dontask:1 mobile:0719355027  
+[2024-05-18 07:23:32] production.INFO: Admin dashboard  
+[2024-05-18 07:23:32] production.INFO: filter:week  
+[2024-05-18 07:23:32] production.INFO: user details  
+[2024-05-18 07:24:07] production.INFO: Admin dashboard  
+[2024-05-18 07:24:07] production.INFO: filter:week  
+[2024-05-18 07:24:07] production.INFO: user details  
+[2024-05-18 07:24:12] production.INFO: Admin dashboard  
+[2024-05-18 07:24:12] production.INFO: filter:year  
+[2024-05-18 07:24:12] production.INFO: user details  
+[2024-05-18 07:24:18] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 204.88
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 1.55
+        )
+
+)
+  
+[2024-05-18 07:24:34] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 7.57
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 10
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.46
+        )
+
+)
+  
+[2024-05-18 07:24:42] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 9.57
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 20
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.97
+        )
+
+)
+  
+[2024-05-18 07:24:55] production.INFO: Requests  
+[2024-05-18 07:25:00] production.INFO: Admin dashboard  
+[2024-05-18 07:25:00] production.INFO: filter:week  
+[2024-05-18 07:25:00] production.INFO: user details  
+[2024-05-18 07:25:33] production.INFO: salesStatistics  
+[2024-05-18 07:25:38] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 11.61
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.59
+        )
+
+)
+  
+[2024-05-18 07:25:56] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 9.53
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 50 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.54
+        )
+
+)
+  
+[2024-05-18 07:27:38] production.INFO: Requests  
+[2024-05-18 07:27:45] production.INFO: getModule  
+[2024-05-18 07:27:45] production.INFO: getModule  
+[2024-05-18 07:28:03] production.INFO: getModule  
+[2024-05-18 07:28:03] production.INFO: getModule  
+[2024-05-18 07:28:18] production.INFO: get_publisher_name  
+[2024-05-18 07:28:18] production.INFO: get_publisher_name  
+[2024-05-18 07:28:28] production.INFO: getModule  
+[2024-05-18 07:28:28] production.INFO: getModule  
+[2024-05-18 07:28:56] production.INFO: get_role_and_permission  
+[2024-05-18 07:28:56] production.INFO: get_role_and_permission  
+[2024-05-18 07:29:09] production.INFO: Get user list  
+[2024-05-18 07:29:09] production.INFO: Get user list  
+[2024-05-18 07:29:26] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 12.47
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.56
+        )
+
+)
+  
+[2024-05-18 07:29:32] production.INFO: salesStatistics  
+[2024-05-18 07:29:36] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 12.7
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 0.45
+        )
+
+)
+  
+[2024-05-18 07:29:47] production.INFO: Get Logged in user  
+[2024-05-18 07:29:47] production.INFO: Get Logged in user  
+[2024-05-18 07:30:13] production.INFO: Admin dashboard  
+[2024-05-18 07:30:13] production.INFO: filter:week  
+[2024-05-18 07:30:13] production.INFO: user details  
+[2024-05-18 07:30:17] production.INFO: Admin dashboard  
+[2024-05-18 07:30:17] production.INFO: filter:week  
+[2024-05-18 07:30:17] production.INFO: user details  
+[2024-05-18 07:30:24] production.INFO: Admin dashboard  
+[2024-05-18 07:30:24] production.INFO: filter:week  
+[2024-05-18 07:30:24] production.INFO: user details  
+[2024-05-18 07:33:48] production.INFO: Admin dashboard  
+[2024-05-18 07:33:48] production.INFO: filter:week  
+[2024-05-18 07:33:48] production.INFO: user details  
+[2024-05-18 07:33:51] production.INFO: Admin dashboard  
+[2024-05-18 07:33:51] production.INFO: filter:week  
+[2024-05-18 07:33:52] production.INFO: user details  
+[2024-05-18 07:33:57] production.INFO: salesStatistics  
+[2024-05-18 07:34:05] production.INFO: salesStatistics  
+[2024-05-18 07:34:07] production.INFO: salesStatistics  
+[2024-05-18 07:34:10] production.INFO: salesStatistics  
+[2024-05-18 07:34:13] production.INFO: salesStatistics  
+[2024-05-18 07:34:17] production.INFO: salesStatistics  
+[2024-05-18 07:34:20] production.INFO: salesStatistics  
+[2024-05-18 07:34:22] production.INFO: salesStatistics  
+[2024-05-18 07:34:25] production.INFO: salesStatistics  
+[2024-05-18 07:34:28] production.INFO: salesStatistics  
+[2024-05-18 07:34:30] production.INFO: salesStatistics  
+[2024-05-18 07:34:35] production.INFO: salesStatistics  
+[2024-05-18 07:34:38] production.INFO: salesStatistics  
+[2024-05-18 07:34:48] production.INFO: Admin dashboard  
+[2024-05-18 07:34:48] production.INFO: filter:week  
+[2024-05-18 07:34:48] production.INFO: user details  
+[2024-05-18 07:43:50] production.INFO: get_role_and_permission  
+[2024-05-18 07:43:50] production.INFO: get_role_and_permission  
+[2024-05-18 07:43:53] production.INFO: Get user list  
+[2024-05-18 07:43:53] production.INFO: Get user list  
+[2024-05-18 07:44:12] production.INFO: Array
+(
+    [0] => Array
+        (
+            [query] => select count(*) as aggregate from `audit`
+            [bindings] => Array
+                (
+                )
+
+            [time] => 15.16
+        )
+
+    [1] => Array
+        (
+            [query] => select `audit_id`, `module`, `module_id`, `user_id`, `activity`, `platform`, `created_at` as `created_on` from `audit` order by `audit_id` desc limit 10 offset 0
+            [bindings] => Array
+                (
+                )
+
+            [time] => 1.04
+        )
+
+)
+  
+[2024-05-18 08:39:38] production.INFO: Admin dashboard  
+[2024-05-18 08:39:38] production.INFO: filter:week  
+[2024-05-18 08:39:38] production.INFO: user details  
+[2024-05-18 09:39:08] production.INFO: user found  
+[2024-05-18 09:39:08] production.INFO: password matched  
+[2024-05-18 09:39:08] production.INFO: attempts_count 0 updated  
+[2024-05-18 09:39:08] production.INFO: token found  
+[2024-05-18 09:39:08] production.INFO: dontask:1 mobile:0719355027  
+[2024-05-18 09:39:09] production.INFO: Admin dashboard  
+[2024-05-18 09:39:09] production.INFO: filter:week  
+[2024-05-18 09:39:09] production.INFO: user details  
+[2024-05-18 09:39:20] production.INFO: Admin dashboard  
+[2024-05-18 09:39:20] production.INFO: filter:week  
+[2024-05-18 09:39:20] production.INFO: user details  
+[2024-05-18 09:39:23] production.INFO: salesStatistics  
+[2024-05-18 09:41:54] production.INFO: get_publisher_name  
+[2024-05-18 09:41:54] production.INFO: get_publisher_name  
+[2024-05-18 09:41:57] production.INFO: Get Logged in user  
+[2024-05-18 09:41:57] production.INFO: Get Logged in user  
+[2024-05-18 09:42:30] production.INFO: get_role_and_permission  
+[2024-05-18 09:42:30] production.INFO: get_role_and_permission  
+[2024-05-18 09:42:33] production.INFO: Get user list  
+[2024-05-18 09:42:33] production.INFO: Get user list  
+[2024-05-18 09:42:47] production.INFO: getModule  
+[2024-05-18 09:42:47] production.INFO: getModule  
+[2024-05-18 09:42:49] production.INFO: Requests  
+[2024-05-18 09:45:00] production.INFO: get_role_and_permission  
+[2024-05-18 09:45:00] production.INFO: get_role_and_permission  

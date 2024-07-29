@@ -6,6 +6,7 @@ import { LibraryCatalogStyle,classes } from '../search/libraryCatalogStyle';
 import ToggleIcon from './toggleIcon';
 
 
+
 const funcObj = new Functions();
 const AUTH_USER = funcObj.getAuthUser();
 class Header extends React.Component {

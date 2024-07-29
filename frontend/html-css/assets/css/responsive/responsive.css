@@ -67,7 +67,8 @@ div#preview-crop-image {
     width: 200px;
 }
 .right_wrap {
-  width: calc(100% - 210px);
+  /* width: calc(100% - 210px); */
+  width: 100%;
 }
 
 a.admin-logo img {

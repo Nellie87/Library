@@ -41,7 +41,8 @@
 .right_wrap{
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 266px);
+    /* width: calc(100% - 266px); */
+    width: 100%;
     align-items: center;
 }
 .page .header .menu-toggle-button .nav-link{

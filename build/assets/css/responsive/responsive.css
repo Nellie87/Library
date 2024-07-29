@@ -192,7 +192,8 @@ div#preview-crop-image {
     width: 200px;
 }
 .right_wrap {
-  width: calc(100% - 210px);
+  /* width: calc(100% - 210px); */
+  width: 100%;
 }
 
 a.admin-logo img {
@@ -448,10 +449,13 @@ a.admin-logo img{
   }
 }
 
-@media  (max-width: 767px) {
-  .customs_wrapper{
-    display: none;
+@media (max-width: 767px) {
+  .customs_wrapper {
+    display: block; /* or adjust to flex if needed */
+    width: 90%; /* Adjust width for smaller screens */
   }
+}
+
  
   .two_btns .col-md-2,.two_btns .col-md-3{
     max-width: 100% !important;
@@ -706,7 +710,7 @@ position: absolute;
     display: none;
   }
 
- }
+ 
 
  @media (max-width: 600px) {
 

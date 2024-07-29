@@ -1,0 +1,59 @@
+/* custom.css */
+.books-cover.one-row .col-lg-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.books-cover.two-rows .col-lg-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.toggle-view-btn {
+    /* background-color: grey; Grey background for the button */
+    border: none; /* Remove default border */
+    border-radius: 10%; /* Make the button rounded */
+    padding: 10px; /* Adjust padding to ensure the button is large enough */
+    display: flex; /* Use flex to center the icon */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+.toggle-view-btn i {
+    color: black; /* Keep icons black */
+    font-size: 24px; /* Adjust the size of the icons */
+}
+/* Remove shadow from button */
+.toggle-view-btn:focus,
+.toggle-view-btn:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ensure shadow is present */
+}
+
+/* custom.css */
+
+/* Styles for small screens */
+@media (max-width: 767.98px) {
+    .books-cover.list-view .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .books-cover.two-columns .col-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    .books-cover.list-view .col-md-4 {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .books-cover.two-columns .col-md-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
