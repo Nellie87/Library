@@ -37,7 +37,8 @@ class Bookdetail extends React.Component {
                 let redirect_exists = '/private-bookdetail?book_id='+book_id;
                 funcObj.setLocalStorage('redirect_exists',redirect_exists)
                  //return funcObj.redirectPage('login');
-                 return window.location = funcObj.api_request_url() + "sso/oauth/authorize";
+                //  return window.location = funcObj.api_request_url() + "sso/oauth/authorize";
+                window.location = funcObj.getSitePath("login");
              } 
            })
       

@@ -53,7 +53,7 @@ export default class LandingPage extends React.Component {
             console.log('dashboard response', data)
            
             if (data.code == 200) {
-
+               console.log("topselling data", data.data.top_selling);
                 this.setState({
                     newRelease: data.data.newRelease,
                     topselling: data.data.top_selling,
@@ -310,6 +310,8 @@ export default class LandingPage extends React.Component {
                         Browse by Subject
                     </div>
                     <BrowseBySubject  slidesToShow={8}  bcols={2}  view_all_link="dbooks?q="  />
+                    <hr></hr>
+
 
 
                     <div className="row-cards-one dashboard-box">

@@ -39,7 +39,7 @@ export default class HomeExploreContentSection extends React.Component {
                     <div className="row explore_contents">
 
             <div className="">
-            <h3 className="scroll_section_heading">Explore our Content</h3>
+            <h3 className="scroll_section_heading">Explore our Contents</h3>
             </div>
                         {
                             this.state.classes && Object.keys(this.state.classes).length > 0 ?

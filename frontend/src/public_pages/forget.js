@@ -62,8 +62,10 @@ class Login extends React.Component {
         const AUTH_USER = funcObj.getAuthUser();
         if (AUTH_USER == null) {
 
-            funcObj.preAuthApiCall2(postBodyData, endPoint).then(data => {
+            funcObj.preAuthApiCall2(postBodyData, endPoint, true).then(data => {
                 console.log('data response', data)
+                // hide the loader
+                this.setState({ loading: false });
                 document.getElementById('email').value="";
                 if (data.code == 200) {
                     funcObj.custom_alert_message(data.message,'success')

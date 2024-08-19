@@ -21,7 +21,6 @@ export default class Registration extends React.Component {
             address: "",
             city: "",
             mobile: "",
-            email: "",
             password: "",
             cpassword: "",
             dob: "",

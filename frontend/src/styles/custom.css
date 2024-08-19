@@ -13,7 +13,7 @@
     border: none; /* Remove default border */
     border-radius: 10%; /* Make the button rounded */
     padding: 10px; /* Adjust padding to ensure the button is large enough */
-    display: flex; /* Use flex to center the icon */
+    display: flex; /* Use flex to center the icon *  /
     align-items: center; /* Center icon vertically */
     justify-content: center; /* Center icon horizontally */
     cursor: pointer; /* Change cursor to pointer on hover */

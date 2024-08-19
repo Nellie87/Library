@@ -507,7 +507,7 @@ class Functions extends React.Component {
   }
 
   
-  preAuthApiCall2(postData, endPoint) {
+  preAuthApiCall2(postData, endPoint, show_loader) {
     console.log('preAuthApiCall endPoint:' + endPoint);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -519,12 +519,18 @@ class Functions extends React.Component {
       body: raw,
       redirect: 'follow'
     };
-
+    if(show_loader){
+      this.loaderView("show")
+    }
+ 
     return new Promise((resolve, reject) => {
 
       fetch(this.apiPostUrl() + endPoint, requestOptions)
         .then(response => response.json())
         .then((data) => {
+          if (show_loader) {
+            this.loaderView("hide");
+          }
           if (data.code == 404) {
             console.log('internal server error');
           } else if (data.code == 401) {
@@ -639,8 +645,8 @@ class Functions extends React.Component {
       this.loaderView("show");
     }
 
-    // console.log('commonFetchApiCall')
-    const { api_url, requestOptions } = this.preparApiParams(postBodyData, endPoint, methodType, multipart);
+    console.log('commonFetchApiCall')
+    const { api_url, requestOptions } = this.preparApiParams(postBodyData, endPoint, methodType, multipart, show_loader);
 
 
     return new Promise((resolve, reject) => {

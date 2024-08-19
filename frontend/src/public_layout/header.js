@@ -122,6 +122,17 @@ export default class PublicHeader extends React.Component {
         }
         openSearchPage(searchVal, search_for);
     }
+    handleLoginClick(e) {
+        e.preventDefault();
+        this.loaderView("show"); // Show the loader
+        
+        // Simulate an async operation (e.g., API call)
+        setTimeout(() => {
+            // You can replace this with actual login logic if necessary
+            window.location.href = funcObj.getSitePath("login");
+            this.loaderView("hide"); // Hide the loader
+        }, 1000); // Simulate delay for demonstration
+    }
 
     render() {
         let search_for = funcObj.get_query_string('search_for');
@@ -246,7 +257,7 @@ export default class PublicHeader extends React.Component {
                     </li>
 
                     {AUTH_USER == null || (AUTH_USER.account_type === 'reader' || AUTH_USER.account_type === 'junior_reader') ? (
-                        <li className="nav-item d-none d-lg-block shopping-cart">
+                        <li className="nav-item d-lg-block shopping-cart">
                             <Link className="nav-link" to="/shopping-cart">
                                 <img src={funcObj.assets_path("/images/icons/shopping-cart.png")} alt="shopping-cart" />
                                 <span className="count" id="cart_count">{cart_items_length}</span>
@@ -255,9 +266,12 @@ export default class PublicHeader extends React.Component {
                     ) : null}
 
                     {AUTH_USER == null ? (
-                        <li className="nav-item mg-w">
-                            <SsologinButton />
-                        </li>
+                       
+                        <li className="nav-item">
+                        <Link className="nav-link to_login bordered-link px-4 btn-signup" to={login_dash}>
+                            {AUTH_USER != null ? "Dashboard" : "Login"}
+                        </Link>
+                    </li>
                     ) : (
                         <React.Fragment>
                             <li className="nav-item mg-w login-profile-area">
@@ -275,6 +289,15 @@ export default class PublicHeader extends React.Component {
                             </li>
                         </React.Fragment>
                     )}
+                    {
+                                      AUTH_USER == null ?
+                                      <li>
+                                      <Link className="nav-link bordered-link px-4 btn-signup to_register" to="registration">
+                                          Register
+                                      </Link>
+                                  </li>
+                                         : null
+                                  }
                 </ul>
             </div>
         </div>

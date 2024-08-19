@@ -13,11 +13,13 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.createnewpassword = this.createnewpassword.bind(this);
         this.verifyOtp = this.verifyOtp.bind(this);
+        this.loaderView = this.loaderView.bind(this);
 
 
         this.state = {
             authentication: false,
             login_success: false,
+            loading: false, // Add this state
             user: {},
             dontask: '',
             password:"",
@@ -65,43 +67,48 @@ class Login extends React.Component {
             document.getElementById('captcha_error').classList.add('d-none');
         }
     }
-    handleSubmit(token) {
-        token.preventDefault();
-        //    const captchaVal = document.getElementById('captchaVal').value;
-        //      console.log("The captcha ",grecaptcha.getResponse().length);
+    loaderView(action = "") {
+        if (document.getElementById("customeloader") != null) {
+            if (action === "show") {
+                document.getElementById("customeloader").style.visibility = "visible";
+            }
 
-
-        //     if(captchaVal == "" || captchaVal == null){
-        //         document.getElementById('captcha_error').classList.remove('d-none');
-        //         return false;
-        //    }else{
-        //         document.getElementById('captcha_error').classList.add('d-none');
-        //    }
-
+            if (action === "hide") {
+                document.getElementById("customeloader").style.visibility = "hidden";
+            }
+        }
+    }
+    handleSubmit(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Show the loader
+        this.loaderView("show"); 
+    
+        // Validate email and password
         var email = document.getElementById('email');
         var password = document.getElementById('password');
-
-        if (email.value == "" || email.value == " ") {
+    
+        if (email.value.trim() === "") {
             document.getElementById('email_error').classList.remove('d-none');
+            this.setState({ loading: false });
             return false;
         } else {
             document.getElementById('email_error').classList.add('d-none');
         }
-
-        if (password.value == "" || password.value == " ") {
+    
+        if (password.value.trim() === "") {
             document.getElementById('password_error').classList.remove('d-none');
+            this.setState({ loading: false });
             return false;
         } else {
             document.getElementById('password_error').classList.add('d-none');
         }
-
+    
         this.setState({
             authentication: false,
             login_success: false
         });
-
-
-        
+    
         let postBodyData = {
             'email': email.value,
             'password': password.value        
@@ -109,13 +116,16 @@ class Login extends React.Component {
         let endPoint = 'login';
         const AUTH_USER = funcObj.getAuthUser();
         if (AUTH_USER == null) {
-
+    
             funcObj.preAuthApiCall2(postBodyData, endPoint).then(data => {
-                console.log('data response', data)
-
-                if (data.code == 200) {
+                console.log('data response', data);
+    
+                // Hide the loader
+                this.loaderView("hide");
+    
+                if (data.code === 200) {
                     document.getElementById('password').value = "";
-                    if (data.data.dontask == true) {
+                    if (data.data.dontask === true) {
                         let user = {
                             'is_logged_in': true,
                             'user': data.data.token_info.original.data,
@@ -126,8 +136,7 @@ class Login extends React.Component {
                         user = JSON.stringify(user);
                         funcObj.setLocalStorage('user', user);
                         return funcObj.redirectAuthenticatedUser();
-                    }
-                    else {
+                    } else {
                         let mobile = data.data.token_info.original.data.mobile;
                         let hidemobile = funcObj.hideMobileNumber(mobile);
                         this.setState({
@@ -138,25 +147,22 @@ class Login extends React.Component {
                         });
                         document.getElementById('otp').focus();
                     }
-
-                } else if (data.code == 201) {
-                    funcObj.custom_alert_message(data.message,'error')
-                }
-                else if (data.code == 202) {
-                    console.log('data response after login', data)
-                  
+                } else if (data.code === 201) {
+                    funcObj.custom_alert_message(data.message, 'error');
+                } else if (data.code === 202) {
+                    console.log('data response after login', data);
                     this.setState({
                         expired: true,
                         user_id: data.data.user_id,
-                        npassword:'',
-                        cpassword:'',
+                        npassword: '',
+                        cpassword: ''
                     });
-                    funcObj.custom_alert_message(data.message,'error')
-                }else if (data.code == 203) {
+                    funcObj.custom_alert_message(data.message, 'error');
+                } else if (data.code === 203) {
                     Swal.fire({
                         title: '',
-                        text:data.message,
-                        padding:'5px',
+                        text: data.message,
+                        padding: '5px',
                         width: 500,
                         showCancelButton: true,
                         confirmButtonText: 'Yes'
@@ -164,15 +170,18 @@ class Login extends React.Component {
                         if (result.isConfirmed) {
                             funcObj.redirectPage('forget-password');
                         }
-                    })
-                    
+                    });
                 }
+            }).catch(error => {
+                // Hide the loader on error
+                this.loaderView("hide");
+                console.error('Error during login:', error);
             });
-
         } else {
-
+            // Handle the case when AUTH_USER is not null
         }
     }
+    
 
     validatePasswordRule(event){
         event.preventDefault();
@@ -344,7 +353,7 @@ class Login extends React.Component {
         if (!funcObj.checkProcessEnvVar('production')) {
             password = 123456;
         }
-        const { isPasswordShown,isconfirmPasswordShown, isPasswordShown1 } = this.state;
+        const { isPasswordShown,isconfirmPasswordShown, isPasswordShown1, loading } = this.state;
         return (
             <React.Fragment>
                 <div className="login-container position-relative">
@@ -432,73 +441,60 @@ class Login extends React.Component {
                                                 </div>
                                             </form>
                                             :
-                                            <form id="loginFrm" onSubmit={this.handleSubmit} >
-                                                {/* <div className="form-title">Login</div> */}
-                                                <div className="text-center">
-                                                    <span className="error d-none" id="common_error"></span>
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="error d-none" id="email_error" >Please enter your email to login</span>
-                                                    <input type="email" className="input-field form-control" placeholder="Email" name="email" id="email" />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="error d-none" id="password_error">Please enter your password to login</span>
-                                                    <input type={isPasswordShown ? "text" : "password"} className="input-field form-control" placeholder="Password" name="password" id="password" 
-                                                        onPaste={(e)=>{
-                                                            e.preventDefault()
-                                                            return false;
-                                                            }} onCopy={(e)=>{
-                                                            e.preventDefault()
-                                                            return false;
-                                                            }} defaultValue={password} />
-                                                    <i
-                                                        className={isPasswordShown ? "fa fa-eye password-icon fa-2x" : "fa fa-eye-slash password-icon fa-2x"}
-                                                        onClick={this.togglePasswordVisiblity}
-                                                    />
-                                                </div>
-
-                                                <div className="form-group">
-                                                    <span className="error d-none" id="captcha_error" >Captcha is required!</span>
-
-
-                                                </div>
-
-                           {/*<input type="checkbox" name="reader" id="reader" />*/}
-                           {/*                     <label For="reader">Reader</label>*/}
-                           {/*                     <input type="checkbox" name="Publisher" id="publisher" />*/}
-                           {/*                     <label For="publisher">Publisher</label>*/}
-
-                                                {/* <input type="hidden" id="captchaVal" />
+                                            <form id="loginFrm" onSubmit={this.handleSubmit}>
+                                            <div className="text-center">
+                                                <span className="error d-none" id="common_error"></span>
+                                            </div>
+                                
                                             <div className="form-group">
-                                         {/* <div className="custom-checkbox w-100">
-                                         <button  data-sitekey="6Lc1jIUbAAAAAEOuOTPyRMVHSLQL50rGxRGU295F" data-callback='onSubmit'  type="button" onClick={this.handleSubmit} className=" g-recaptcha btn signinBtn sign_in_btn" >Sign ln</button>
-                                            </div> */}
-
-                                                <div className="form-group">
-                                                    <div className="custom-checkbox">
-                                                        <input type="checkbox" name="terms_condition" id="terms_condition" />
-                                                        <label htmlFor="terms_condition">Remember Password</label>
-                                                    </div>
+                                                <span className="error d-none" id="email_error">Please enter your email to login</span>
+                                                <input type="email" className="input-field form-control" placeholder="Email" name="email" id="email" />
+                                            </div>
+                                
+                                            <div className="form-group">
+                                                <span className="error d-none" id="password_error">Please enter your password to login</span>
+                                                <input
+                                                    type={isPasswordShown ? "text" : "password"}
+                                                    className="input-field form-control"
+                                                    placeholder="Password"
+                                                    name="password"
+                                                    id="password"
+                                                    onPaste={(e) => { e.preventDefault(); return false; }}
+                                                    onCopy={(e) => { e.preventDefault(); return false; }}
+                                                />
+                                                <i
+                                                    className={isPasswordShown ? "fa fa-eye password-icon fa-2x" : "fa fa-eye-slash password-icon fa-2x"}
+                                                    onClick={this.togglePasswordVisiblity}
+                                                />
+                                            </div>
+                                
+                                            <div className="form-group">
+                                                <span className="error d-none" id="captcha_error">Captcha is required!</span>
+                                            </div>
+                                
+                                            <div className="form-group">
+                                                <div className="custom-checkbox">
+                                                    <input type="checkbox" name="terms_condition" id="terms_condition" />
+                                                    <label htmlFor="terms_condition">Remember Password</label>
                                                 </div>
-
-                                                <div className="form-group">
-                                                    <button data-callback='onSubmit' type="submit" className="btn signinBtn sign_in_btn" >Login</button>
-                                                </div>
-                                                 <div className="light-text">
-                                                    Forgot Password <span> <Link to="" onClick={(e) => funcObj.loadUrl("forget-password")} >Click here</Link></span>
-                                                </div>
-                                                {/*<div className="light-text">*/}
-                                                {/*    Don’t have an account <span> <Link to="" onClick={(e) => funcObj.loadUrl("registration")} >Register here</Link></span>*/}
-                                                {/*</div>*/}
-                                                {/* <div className="light-text">
-                                                    <NewsLetter />
-                                                </div> */}
-
-
-
-                                            </form>
+                                            </div>
+                                
+                                            <div className="form-group">
+                                                <button type="submit" className="btn signinBtn sign_in_btn" disabled={loading}>
+                                                    {loading ? (
+                                                        <span>
+                                                            <i className="fas fa-spinner fa-spin"></i> Logging in...
+                                                        </span>
+                                                    ) : (
+                                                        'Login'
+                                                    )}
+                                                </button>
+                                            </div>
+                                
+                                            <div className="light-text">
+                                                Forgot Password <span><Link to="" onClick={(e) => funcObj.loadUrl("forget-password")}>Click here</Link></span>
+                                            </div>
+                                        </form>
                                     }
 
 

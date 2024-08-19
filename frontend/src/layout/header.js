@@ -197,18 +197,7 @@ class Header extends React.Component {
                             <div className="right-eliment">
                                 <ul className="list">
 
-                                    {/* <li className="bell-area">
-                                    <a id="notf_conv" className="dropdown-toggle-1" >
-                                        <i className="far fa-envelope"></i>
-                                        <span data-href="#" id="conv-notf-count">0</span>
-                                    </a>
-                                    <div className="dropdown-menu">
-                                        <div className="dropdownmenu-wrapper" data-href="#" id="conv-notf-show">
-                                        </div>
-                                    </div>
-                                </li>  */}
-
-                                    {
+                                  {
                                         (AUTH_USER.account_type == 'reader' || AUTH_USER.account_type == 'junior_reader') ?
                                             <li className="shopping-cart">
                                                 <Link className="nav-link" to="/my-cart"><img src={funcObj.assets_path("/images/icons/shopping-cart.png")} alt="shopping-cart" /> <span className="count" id="cart_count">{cart_items}</span></Link>
@@ -216,7 +205,7 @@ class Header extends React.Component {
                                             : null
                                     }
                                     <li className="login-profile-area ">
-                                        {/* <strong id="user_name">{this.state.username}</strong> */}
+                                      
 
                                         <span>{this.state.username}</span>
 
@@ -240,12 +229,7 @@ class Header extends React.Component {
                                                             </li>
                                                     }
 
-                                                    {/*<li>*/}
-                                                    {/*    <Link className="curptr" to="/change-password"><i className="fas fa-cog"></i>Change Password</Link>*/}
-                                                    {/*</li>*/}
-                                                    {/* <li className="curptr" >
-                                                    <a className="curptr" onClick={(e)=>this.logout()}><i className="fas fa-power-off"></i>Logout</a>
-                                                </li> */}
+                                                 
                                                 </ul>
                                             </div>
                                         </div>

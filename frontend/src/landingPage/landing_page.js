@@ -98,9 +98,7 @@ export default class LandingPage extends React.Component {
                                                     <li>
                                                         <Link className="curptr"  to="/reader-profile"><i className="fas fa-cog"></i>My Profile</Link>
                                                     </li>
-                                                    {/*<li>*/}
-                                                    {/*<Link className="curptr"  to="/change-password"><i className="fas fa-cog"></i>Change Password</Link>*/}
-                                                    {/*</li>*/}
+                                                   
                                                     <li className="curptr" >
                                                         <a className="curptr" onClick={(e)=>this.logout()}><i className="fas fa-power-off"></i>Logout</a>
                                                     </li>

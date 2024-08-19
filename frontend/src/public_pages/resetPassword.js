@@ -85,6 +85,8 @@ class ResetPassword extends React.Component {
       
             funcObj.preAuthApiCall2(postBodyData, endPoint).then(data => {
                 console.log('data response', data)
+                // hide the loader
+                this.setState({ loading: false });
                 if (data.code == 200) {
                   funcObj.custom_alert_message(data.message,'success',"login")
 
