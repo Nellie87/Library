@@ -1,27 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';  // Use 'react-dom/client' for React 18+
 import './index.css';
 import App from './App';
 import Customcss from './Customcss';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { ContextProvider } from './helpers/MyContext';
+
 console.log('index loaded');
-ReactDOM.render(
-  
+
+// Render Customcss component
+const cssRoot = ReactDOM.createRoot(document.getElementById('css'));
+cssRoot.render(
   <React.StrictMode>
     <Customcss />
-  </React.StrictMode>,  
-  document.getElementById('css')
+  </React.StrictMode>
 );
-ReactDOM.render(
-  
+
+// Render App component inside ContextProvider
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-  <ContextProvider>
-    <App />
+    <ContextProvider>
+      <App />
     </ContextProvider>
-  </React.StrictMode>,  
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Pie } from "react-chartjs-2";
 import {  colors } from "./styles";
-import { addDays } from "date-fns";
+// import { addDays } from "date-fns";
 import CustomDatePicker from "./datepicker";
 import { queryReport } from "./queryReport";
 import {  ReportWrapper, Subtitle, DatepickerRow } from "./styles";
